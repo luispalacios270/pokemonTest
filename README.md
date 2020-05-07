@@ -1,45 +1,24 @@
-# Front-end Code Challenge - React
+# Questions
 
-This is a boilerplate for a code-challenge meant for Front-end engineers using React as library tool for development. It includes all necessary HTML and CSS, so your work is to focus on the development of the app. Please fork this repository in your own account.
+1. Explain the difference between a var, a let, and a const
+   R: Const and let are block scope... So, when you declare a variable on a function using var and let are pretty much the same... one example: You have a function with a If scope insidethe function, if you declare a variable insede the If scope using VAR it's pretty much the same as declaring the variable outside the scope but if you use let or const that declaration it's only available in that scope.
 
-### For other technologies
+2. What are the differences between declaring a function with the keyword function against creating it with an arrow function?
+   R: Well... An arrow function doesn't create a context. The bottom line would be when you're using an arrow function, you won't create a "THIS" it would use the "This" of its parent.
 
-Switch to the branch of the technology of your expertise and follow the README:
+3. What is a closure, and how/why would you use one?
+   R: A closure it's pretty much a function inside another function, this is the way we usedto create private properties before EcmaScript6 because you can create classes now.
 
-```bash
-git checkout [react-native|angular]
+4. How would you turn a method with a callback argument into a promise? In a way you return “info” in the Promise and use the callback function there
+   R: Ok, do you want me to remove the callback from the parameters and use a promise instead. I mean... I think the easiest way would be... Something like this... I writing it down... Ok, there you go. I don't know if this is what you were asking me to do?
+
+Code:
+
+```javascript
+const fnCallback = async () => {
+  const info = '';
+  return info;
+};
+const resp = await fnCallback();
+console.log(resp);
 ```
-
-## How to use
-
-```bash
-git clone https://github.com/Nikodermus/frontend-code-challenge.git
-cd frontend-code-challenge
-npm install
-npm run start
-```
-
-The app will be available in your browser at `localhost:3000`
-
-## Challenges
-
-These are a series of features the app should do, here they are sorted in the priority they have, if you feel unable to complete one you can continue with the next one in hope to do as much as possible in given the time scope.
-
-1.  Fetch the given `.json` file inside `src/App.jsx` when the user writes in the input
-1.  Filter the results given user input, it can be searched by `Name` or one of its `Types`
-1.  Results should be not more than 4 at any time.
-1.  Sort elements first if the match the `Name`, then if they match the `Type`
-1.  User can toggle on/off to sort by maximum combat points (`MaxCP`), this will take effect on the whole list, but you should only show the first 4 elements that match the current search
-1.  If the search matches a part of the name, that part of the name should be hightlighted
-1.  While the list is being downloaded, show the loader.
-1.  If there're no results, show the `No Results` badge
-
-## Development
-
-- You can use internet, other projects, textbooks and whatever you think you need to complete the task, work as you usually would.
-- Please speak as you develop, this in order to understand better what you are trying to do.
-- You can ask questions if you need to, but try to refer to this document in first place, should have all what you need.
-- You can create as many components in the fasion you want (classes, stateless functional components, react hooks).
-- This setup uses EcmaScript Stage 4, you can use destructure, rest syntax, etc... This project is meant to be written with ES6+ standard.
-- Do not add dependencies.
-- Do not spend time in configuration, babel, webpack. This project has enough for its purpose and time is short.
